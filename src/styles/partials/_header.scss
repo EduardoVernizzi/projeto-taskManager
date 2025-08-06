@@ -1,0 +1,8 @@
+@use './variables' as var;
+
+.header{
+  background-color: var.$primary-color;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}

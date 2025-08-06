@@ -1,0 +1,56 @@
+@use './variables' as var;
+
+.task-list {
+  max-height: 45vh; 
+  min-height: 45vh;   
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.empty {
+  text-align: center;
+  margin-top: 2rem;
+  color: var.$text-color;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1;
+  align-items: center;
+  padding: 0.75rem;
+  border: 1px solid var.$primary-color;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  background-color: white;
+
+  span {
+    cursor: pointer;
+    flex: 1;
+  }
+
+  button {
+    background: none;
+    padding: 0 0.3rem;
+    border: none;
+    cursor: pointer;
+    color: red;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &.completed span {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+  }
+}
